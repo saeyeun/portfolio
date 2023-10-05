@@ -27,18 +27,22 @@ $(document).ready(function () {
         change.css({ 'height': scrollTop * 3.5 });//높이 변경
 
         // main_title 스크롤을 내릴 때, opicity 0으로 조절
-        var max = 420; //투명도가 0이 되는 스크롤 위치
-        if (scrollTop < max) {
-          $(".main_title_box").css({ "opacity": (max - scrollTop) / max });
+        if (scrollTop < 420) {
+          $(".main_title_box").css({ "opacity": (420 - scrollTop) / 420 });
         } else {
-          $(".main_title_box").css({ "opacity": 0 });
+          $(".main_title_box").css({ "opacity": 0});
         }
+
+        // 스크롤 값이 520보다 작으면 나타나고, 그 이상이면 사라짐
+      if(scrollTop < 520) {
+        $(".main_title_box").css({ "display": "block" });
+      } else {
+        $(".main_title_box").css({ "display": "none" });
+      }
       } else {
         circle.css({ 'width': 400 + 'px' }); //기존 너비 설정
         circle.css({ 'height': 400 + 'px' }); //기존 높이 설정
       }
-
-
     }
   })
 });

@@ -114,7 +114,7 @@ header .header_inner {
   display: block;
   position: fixed;
   width: 100%;
-  z-index: 99;
+  z-index: 999;
   font-size: 10rem;
   margin: 0 auto;
   top: 50%;
@@ -177,27 +177,186 @@ header .header_inner {
 .profile {
   position: relative;
   width: 100%;
-  height: 970px;
-  background-color: rgb(228, 233, 249);
+  height: 940px;
+  background-color: #f9f6f4;
   overflow: hidden;
 }
 
+.profile .container {
+  width: 100%;
+  height: 940px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 256rem;
+  padding: 0 6rem;
+}
+
+.profile_pic_box {
+  width: 40rem;
+  height: 40rem;
+  background-color: salmon;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.profile_pic {
+  width: 100%;
+  height: 100%;
+  /* background-image: url(../img/profile_sample.jpg); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.profile_about {
+  width: 70rem;
+  margin-left: 10rem;
+}
+
+.profile_about .txt_box {
+  padding-top: 1.6rem;
+  font-size: 1.6rem;
+}
+
+.profile_about .txt_box p:nth-child(2),
+.profile_about .txt_box p:nth-child(3) {
+  margin-top: 1.8rem;
+}
+
+/* skill 영역 */
 .skill {
   position: relative;
   width: 100%;
-  height: 970px;
-  background-color: #f5f5f7;
-  overflow: hidden;
+  /* height: 1280px; */
+  background-color: #fff;
+  /* background-color: #f9f6f4; */
 }
 
+.skill .container {
+  width: 100%;
+  display: block;
+  position: relative;
+  display: flex;
+} 
+
+.skill .left_box {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 100vh;
+  background-color: rgb(219, 234, 255);
+}
+
+.skill .left_contents {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  padding: 0 6rem;
+}
+
+.skill .right_box {
+  position: relative;
+  width: 60%;
+}
+
+.skill .right_contents {
+  width: 100%;
+  height: 100%;
+  padding: 16rem 6rem;
+}
+
+.skill_list {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.skill_list .skill_tit {
+  font-size: 4rem;
+}
+
+.skill_list .skill_txt {
+  font-size: 1.6rem;
+  padding-left: 4.5rem;
+}
+
+.skill_list_line {
+  border: 1px solid #8c8c8c;
+  margin: 10rem 0;
+}
+
+/* project 영역 */
 .project {
   position: relative;
   width: 100%;
-  height: 970px;
-  background-color: #ccc;
+  height: 4560px;
+  background-color: #f9f6f4;
   overflow: hidden;
 }
 
+.project .container {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+  /* max-width: 256rem; */
+  padding: 0 6rem;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+} 
+
+.project_contents {
+  position: relative;
+  width: 100%;
+  height: 760px;
+  /* background-color: #8c8c8c; */
+}
+
+.project_left {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  left: 0;
+  /* background-color: salmon; */
+}
+
+.project_left img {
+  position: relative;
+  width: 100%;
+  padding: 0 6rem;
+  top: 50%;
+  /* left: 50%; */
+  transform: translateY(-50%);
+}
+
+.project_right {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  right: 0;
+  /* background-color: skyblue; */
+}
+
+.project_txt {
+  position: relative;
+  width: 100%;
+  height: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 4rem;
+  font-size: 1.6rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 1px 2px 10px 0px rgba(147, 147, 147, 0.2);
+}
+
+/* contact 영역 */
 .contact {
   position: relative;
   width: 100%;
@@ -223,6 +382,10 @@ header .header_inner {
 }
 
 @media screen and (max-width : 980px) {
+  .main_title_box {
+    position: relative;
+  }
+
   .main_circle {
     display: block;
   }
