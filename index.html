@@ -4,9 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Yoo SaeYeon's portfolio</title>
   <!-- 외부 스타일시트 연결 -->
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/res.css">
   <!-- 외부 스크립트 연결 -->
   <script src="http://code.jquery.com/jquery-latest.js"></script>
   <script src="js/jquery.easing.1.3.js"></script>
@@ -14,22 +15,46 @@
 </head>
 
 <body>
+  <!-- header 영역 시작 -->
   <header>
     <div class="header_inner">
       <ul class="nav_list">
         <li>
+          <p class="pj_adress">
+            www.oooo.co.kr
+          </p>
+        </li>
+        <li>
           <h1 class="logo"><a href="#">Saeyeon's Web portfolio</a></h1>
         </li>
-        <li class="menu_btn_wrap">
+        <!-- menu 버튼 -->
+        <li class="menu">
           <div class="menu_btn">
+            <p>MENU</p>
+            <!-- <a href="" class="menu_btn"> -->
             <span class="t_line menu_line"></span>
             <span class="b_line menu_line"></span>
+            <!-- </a> -->
+          </div>
+          <!-- menu 리스트 -->
+          <div class="menu_wrap">
+            <nav class="nav">
+              <ul class="menu_list">
+                <li><a href="#main">MAIN</a></li>
+                <li><a href="#about">ABOUT ME</a></li>
+                <li><a href="#skill">SKILLS</a></li>
+                <li><a href="#project">PROJECTS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+              </ul>
+            </nav>
           </div>
         </li>
       </ul>
     </div>
   </header>
-  <section class="main">
+  <!-- header 영역 끝 -->
+  <!-- main 영역 시작 -->
+  <section id="main">
     <div class="container">
       <div class="main_title_box">
         <div class="main_title_inner">
@@ -37,178 +62,231 @@
           <p class="main_title_center">portfolio</p>
         </div>
         <div class="txt_wrap">
-          <span class="txt">Lorem ipsum dolor sit amet</span>
-          <span class="txt">Lorem ipsum dolor sit amet</span>
-          <span class="txt">Lorem ipsum dolor sit amet</span>
+          <span class="txt">유연한 사고와 능동적인 배움을 위해</span>
+          <span class="txt">끊임없이 노력하는 유새연입니다.</span>
         </div>
       </div>
       <div class="main_circle"></div>
-      <div class="change_circle">
-      </div>
+      <div class="change_circle"></div>
     </div>
   </section>
-  <section class="profile">
+  <section id="about">
     <div class="container">
-      <div class="profile_pic_box">
-        <div class="profile_pic"></div>
+      <div class="about_pic_box">
+        <figure class="about_pic"></figure>
       </div>
-      <div class="profile_about">
+      <div class="about_txt_box">
         <strong>ABOUT ME</strong>
-        <div class="txt_box">
-          <p>lorem ipsum dolor sit amet consectetur adipisicing<br> elit. Optio dolorum enim quasi nostrum tempore,
-            minus, maiores totam consectetur necessitatibus iure quos inventore placeat nobis</p>
-          <p>lorem ipsum dolor sit amet consectetur adipisicing<br> elit. Optio dolorum enim quasi nostrum tempore,
-            minus, maiores totam consectetur necessitatibus iure quos inventore placeat nobis</p>
-          <p>lorem ipsum dolor sit amet consectetur adipisicing<br> elit. Optio dolorum enim quasi nostrum tempore,
-            minus, maiores totam consectetur necessitatibus iure quos inventore placeat nobis</p>
+        <div class="about_txt">
+          <p>안녕하세요, 유새연입니다.<br>코드를 입력하면 바로 결과물이 도출되어 웹사이트가 구현되는 점에서 웹퍼블리싱의 큰 매력을 느꼈습니다.</p>
+          <p>국비교육과정에서 기획, 디자인, 퍼블리싱 수업을 통해 전반적인 웹사이트의 제작과정을 이해할 수 있었습니다.<br> 또한, 기획 단계에서 팀원들과 의견을 공유하고 협의했던 경험을 바탕으로 실무
+            협업과정에서 프로젝트의 원활한 진행에 기여할 수 있을 것이라고 생각합니다.</p>
+          <p>퍼블리싱 과정에서 발생한 오류해결은 기본기를 더욱 단단하게 다질 수 있는 하나의 밑거름이라고 생각합니다.<br> 교육과정에서 혼자 해결했던 문제들을 따로 메모하던 습관은 하나의 오답노트가
+            되었습니다. 이로써, 새로운 문제를 해결하는 것에 대한 두려움보다는 짜릿함으로 다가왔습니다.
+            <br>이러한 경험을 발판삼아 꾸준함과 전문성을 겸비한 웹퍼블리셔가 되고자합니다.
+          </p>
         </div>
       </div>
     </div>
   </section>
-  <section class="skill">
+  <!-- main 영역 끝 -->
+  <!-- skill 영역 시작 -->
+  <section id="skill">
     <div class="container">
       <div class="left_box">
         <div class="left_contents">
-          <h2>Lorem ipsum dolor, sit amet</h2>
-          <p>Lorem ipsum dolor, sit amet<br>lorem ipsum dolor sit amet consectetur adipisicing</p>
+          <h2 class="headline">SKILLS</h2>
+          <p class="subhead">제가 다룰 수 있는 스킬들을 소개합니다.</p>
         </div>
       </div>
       <div class="right_box">
         <div class="right_contents">
           <div class="skill_1 skill_list">
             <span class="skill_tit">HTML5</span>
-            <p class="skill_txt">lorem ipsum dolor sit amet consectetur adipisicing,lorem ipsum dolor sit amet
-              consectetur adipisicing</p>
+            <div class="skill_txt_box">
+              <p class="skill_txt">한국형 웹 콘텐츠 접근성 지침을 준수하는 데 중점</p>
+              <p class="skill_txt">html5에서 권장하는 시맨틱 마크업을 통해 레이아웃 구조 설계</p>
+            </div>
           </div>
           <div class="skill_list_line"></div>
           <div class="skill_2 skill_list">
             <span class="skill_tit">CSS3</span>
-            <p class="skill_txt">lorem ipsum dolor sit amet consectetur adipisicing,lorem ipsum dolor sit amet
-              consectetur adipisicing</p>
+            <div class="skill_txt_box">
+              <p class="skill_txt">웹사이트의 효율성 향상을 위해 크로스브라우징(cross browsing)</p>
+            </div>
           </div>
           <div class="skill_list_line"></div>
           <div class="skill_3 skill_list">
             <span class="skill_tit">JAVASCRIPT</span>
-            <p class="skill_txt">lorem ipsum dolor sit amet consectetur adipisicing,lorem ipsum dolor sit amet
-              consectetur adipisicing</p>
+            <div class="skill_txt_box">
+              <p class="skill_txt">네비게이션,모바일메뉴,슬라이드 등의 제이쿼리 구현이 가능합니다.</p>
+              <p class="skill_txt">수량증감,스크롤이벤트와 같은 기능 역시 플러그인을 사용하지 않고 하드코딩으로 구현할 수 있습니다.</p>
+            </div>
           </div>
           <div class="skill_list_line"></div>
           <div class="skill_4 skill_list">
-            <span class="skill_tit">Responsive Wep</span>
-            <p class="skill_txt">lorem ipsum dolor sit amet consectetur adipisicing,lorem ipsum dolor sit amet
-              consectetur adipisicing</p>
+            <span class="skill_tit">
+              <p>Responsive</p>
+              <p>Wep</p>
+            </span>
+            <div class="skill_txt_box">
+              <p class="skill_txt">사용자가 다양한 플랫폼에서 동일한 서비스를 제공받을 수 있도록 media-query를 활용하여 반응형 웹사이트를 제작한 경험이 있습니다.</p>
+              <p class="skill_txt">flex와 grid방식을 활용한 반응형 웹 제작이 가능합니다.</p>
+            </div>
           </div>
           <div class="skill_list_line"></div>
           <div class="skill_5 skill_list">
-            <span class="skill_tit">Ai,Ps,Figma</span>
-            <p class="skill_txt">lorem ipsum dolor sit amet consectetur adipisicing,lorem ipsum dolor sit amet
-              consectetur adipisicing</p>
+            <span class="skill_tit">Ai/Ps/Figma</span>
+            <div class="skill_txt_box">
+              <p class="skill_txt">UI/UX 설계는 주로 figma를 중점적으로 이용하여 디자인하였습니다.</p>
+              <p class="skill_txt">이미지 및 일러스트 작업은 포토샵과 일러스트레이터를 활용했습니다.</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <section class="project">
+  <!-- skill 영역 끝 -->
+  <!-- project 영역 시작 -->
+  <section id="project">
     <div class="container">
       <div class="project_1 project_contents">
         <div class="project_left">
-          <img src="img/mokup_sample.png" alt="">
+          <img src="img/project_1_image.png" alt="담다 웹사이트의 목업 이미지">
         </div>
         <div class="project_right">
           <div class="project_txt">
-            <p>lorem ipsum dolor sit amet consectetur adipisicing,lorem ipsum dolor sit amet
-            <p>lorem ipsum dolor sit amet</p>
-            <p>lorem ipsum dolor sit amet</p>
-            <p>lorem ipsum dolor sit amet consectetur adipisicing,lorem ipsum dolor sit amet
-            <p>lorem ipsum dolor sit amet consectetur adipisicing,lorem ipsum dolor sit amet
-              consectetur adipisicing</p>
-            <button class="view_btn">view site</button>
+            <strong class="pj_tit"><span></span>Dam,da</strong>
+            <p class="info">고객이 다양한 상품을 보다 편리하게 구매할 수 있도록 레이아웃에 중점을 두어 디자인 쇼핑몰을 제작하였습니다.</p>
+            <p><span>작업기간</span>5일</p>
+            <p><span>제작방식</span>HTML+CSS+JQUERY</p>
+            <p><span>레이아웃</span>Css Flex를 이용한 레이아웃</p>
+            <p><span>기능사항</span>Slick-slider 플러그인 사용하였으며, 플러그인을 제외한 모든 퍼블리싱 작업은 하드코딩으로 제작</p>
+            <p><span>플러그인</span>Slick-slider</p>
+            <p><span>제작참여</span>100% 참여</p>
+            <button class="view_btn" type="button" onclick="window.open('#');" aria-label="담다 사이트로 이동하기">
+              view site
+            </button>
           </div>
         </div>
       </div>
       <div class="project_2 project_contents">
         <div class="project_left">
-          <img src="img/mokup_sample.png" alt="">
+          <img src="img/mokup_sample.png" alt="철도박물관 웹사이트의 목업 이미지">
         </div>
         <div class="project_right">
           <div class="project_txt">
-            <p>lorem ipsum dolor sit amet</p>
-            <p>lorem ipsum dolor sit amet</p>
-            <p>lorem ipsum dolor sit amet consectetur adipisicing,lorem ipsum dolor sit amet
-            <p>lorem ipsum dolor sit amet consectetur adipisicing,lorem ipsum dolor sit amet
-            <p>lorem ipsum dolor sit amet consectetur adipisicing,lorem ipsum dolor sit amet
-              consectetur adipisicing</p>
-            <button class="view_btn">view site</button>
+            <strong class="pj_tit"><span></span>철도박물관</strong>
+            <p class="info">철도박물관 사이트를 디자인부터 메뉴구성까지 새롭게 반응형 웹사이트로 리뉴얼하였습니다.
+              기존 홈페이지의 전체적으로 무거운 색감을 밝은 느낌으로 디자인하였고, 정보를 한 눈에 얻을 수 있도록 레이아웃을 수정하였습니다.</p>
+            <p><span>작업기간</span>7일</p>
+            <p><span>제작방식</span>HTML+CSS+JQUERY</p>
+            <p><span>레이아웃</span>Css Flex와 Gird를 이용한 레이아웃</p>
+            <p><span>기능사항</span>Slide 등 모든 퍼블리싱 작업은 하드코딩으로 제작</p>
+            <p><span>제작참여</span>100% 참여</p>
+            <button class="view_btn" type="button" onclick="window.open('#');" aria-label="철도박물관 리뉴얼 사이트로 이동하기">
+              view site
+            </button>
           </div>
         </div>
       </div>
       <div class="project_3 project_contents">
         <div class="project_left">
-          <img src="img/mokup_sample.png" alt="">
+          <img src="img/mokup_sample.png" alt="이삭토스트 웹사이트의 목업 이미지">
         </div>
         <div class="project_right">
           <div class="project_txt">
-            <p>lorem ipsum dolor sit amet</p>
-            <p>lorem ipsum dolor sit amet</p>
-            <p>lorem ipsum dolor sit amet consectetur adipisicing,lorem ipsum dolor sit amet
-            <p>lorem ipsum dolor sit amet consectetur adipisicing,lorem ipsum dolor sit amet
-            <p>lorem ipsum dolor sit amet consectetur adipisicing,lorem ipsum dolor sit amet
-              consectetur adipisicing</p>
-            <button class="view_btn">view site</button>
+            <strong class="pj_tit"><span></span>이삭토스트</strong>
+            <p class="info">이삭토스트의 활기찬 느낌을 강조하고자 동적인 애니메이션 요소를 더했고, 기업의 정보성 콘텐츠를 중점으로 제작하였습니다.</p>
+            <p><span>작업기간</span>7일</p>
+            <p><span>제작방식</span>HTML+CSS+JQUERY</p>
+            <p><span>레이아웃</span>Css Flex를 이용한 레이아웃</p>
+            <p><span>기능사항</span>Animaion, 수량 증감 구현, Top 버튼 등 모든 퍼블리싱 작업은 하드코딩으로 제작, 상품 메뉴 부분은 서브페이지 연결</p>
+            <p><span>제작참여</span>100% 참여</p>
+            <button class="view_btn" type="button" onclick="window.open('#');" aria-label="이삭토스트 사이트로 이동하기">
+              view site
+            </button>
           </div>
         </div>
       </div>
       <div class="project_4 project_contents">
         <div class="project_left">
-          <img src="img/mokup_sample.png" alt="">
+          <img src="img/mokup_sample.png" alt="로제 팬페이지의 목업 이미지">
         </div>
         <div class="project_right">
           <div class="project_txt">
-            <p>lorem ipsum dolor sit amet</p>
-            <p>lorem ipsum dolor sit amet</p>
-            <p>lorem ipsum dolor sit amet consectetur adipisicing,lorem ipsum dolor sit amet
-            <p>lorem ipsum dolor sit amet consectetur adipisicing,lorem ipsum dolor sit amet
-            <p>lorem ipsum dolor sit amet consectetur adipisicing,lorem ipsum dolor sit amet
-              consectetur adipisicing</p>
-            <button class="view_btn">view site</button>
+            <strong class="pj_tit"><span></span>로제 팬페이지</strong>
+            <p class="info">고객이 다양한 상품을 보다 편리하게 구매할 수 있도록 레이아웃에 중점을 두어 디자인 쇼핑몰을 제작하였습니다.</p>
+            <p><span>작업기간</span>6일</p>
+            <p><span>제작방식</span>HTML+CSS+JQUERY</p>
+            <p><span>레이아웃</span>Css Position을 이용한 자유로운 레이아웃</p>
+            <p><span>기능사항</span></p>
+            <p><span>제작참여</span>100% 참여</p>
+            <button class="view_btn" type="button" onclick="window.open('#');" aria-label="로제 사이트로 이동하기">
+              view site
+            </button>
           </div>
         </div>
       </div>
-      <div class="project_5 project_contents">
-        <div class="project_left">
-          <img src="img/mokup_sample.png" alt="">
-        </div>
-        <div class="project_right">
-          <div class="project_txt">
-            <p>lorem ipsum dolor sit amet</p>
-            <p>lorem ipsum dolor sit amet</p>
-            <p>lorem ipsum dolor sit amet consectetur adipisicing,lorem ipsum dolor sit amet
-            <p>lorem ipsum dolor sit amet consectetur adipisicing,lorem ipsum dolor sit amet
-            <p>lorem ipsum dolor sit amet consectetur adipisicing,lorem ipsum dolor sit amet
-              consectetur adipisicing</p>
-            <button class="view_btn">view site</button>
+      <!-- clone website 영역 -->
+      <div class="clone">
+        <h2 class="headline">Clone Website</h2>
+        <div class="clone_list">
+          <div class="project_5 clone_contents">
+            <div class="clone_top">
+              <img src="img/mokup_sample.png" alt="애플 클론 웹사이트의 목업 이미지">
+            </div>
+            <div class="clone_bottom">
+              <div class="clone_txt">
+                <strong class="pj_tit"><span></span>APPLE 클론 웹사이트</strong>
+                <p class="info"></p>
+                <p><span>작업기간</span>4일</p>
+                <p><span>제작방식</span>HTML+CSS+JQUERY</p>
+                <p><span>레이아웃</span>Css Grid를 이용한 레이아웃</p>
+                <p><span>기능사항</span>Swiper-slider를 제외한 모든 퍼블리싱 작업은 하드코딩으로 제작</p>
+                <p><span>플러그인</span>Swiper-slider</p>
+                <p><span>제작참여</span>100% 참여</p>
+                <button class="view_btn" type="button" onclick="window.open('#');" aria-label="애플 클론 사이트로 이동하기">
+                  view site
+                </button>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="project_6 project_contents">
-        <div class="project_left">
-          <img src="img/mokup_sample.png" alt="">
-        </div>
-        <div class="project_right">
-          <div class="project_txt">
-            <p>lorem ipsum dolor sit amet</p>
-            <p>lorem ipsum dolor sit amet</p>
-            <p>lorem ipsum dolor sit amet consectetur adipisicing,lorem ipsum dolor sit amet
-            <p>lorem ipsum dolor sit amet consectetur adipisicing,lorem ipsum dolor sit amet
-            <p>lorem ipsum dolor sit amet consectetur adipisicing,lorem ipsum dolor sit amet
-              consectetur adipisicing</p>
-            <button class="view_btn">view site</button>
+          <div class="project_6 clone_contents">
+            <div class="clone_top">
+              <img src="img/mokup_sample.png" alt="넷플릭스 클론 웹사이트의 목업 이미지">
+            </div>
+            <div class="clone_bottom">
+              <div class="clone_txt">
+                <strong class="pj_tit"><span></span>NETFLIX 클론 웹사이트</strong>
+                <p class="info"></p>
+                <p><span>작업기간</span>3일</p>
+                <p><span>제작방식</span>HTML+CSS</p>
+                <p><span>레이아웃</span>Css Flex를 이용한 레이아웃</p>
+                <p><span>기능사항</span>모든 퍼블리싱 작업은 하드코딩으로 제작</p>
+                <p><span>제작참여</span>100% 참여</p>
+                <button class="view_btn" type="button" onclick="window.open('#');" aria-label="넷플리스 클론 사이트로 이동하기">
+                  view site
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <section class="contact"></section>
+  <!-- project 영역 끝 -->
+  <!-- contact 영역 시작 -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact_txt">
+        <p>lorem ipsum dolor sit amet consectetur adipisicing,lorem ipsum dolor sit</p>
+        <p>감사합니다.</p>
+      </div>
+      <div class="contact_circle"></div>
+    </div>
+  </section>
+  <!-- contact 영역 끝 -->
 </body>
 
 </html>
