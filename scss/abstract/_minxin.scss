@@ -1,0 +1,67 @@
+@mixin Circle() {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: linear-gradient(rgba(219, 234, 255, 0.5), rgba(241, 225, 235, 0.5));
+  top: 36%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin pjOn() {
+  opacity: 1;
+  -webkit-transform: translateX(0%);
+  -moz-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  -o-transform: translateX(0%);
+  transform: translateX(0%);
+}
+
+@mixin pjTitle() {
+  .pj_tit {
+    position: relative;
+    width: 100%;
+    font-size: 2.8rem;
+    padding-left: 1.2rem;
+
+    span {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 4px;
+      height: 100%;
+      background-color: rgb(202, 223, 255);
+      margin-left: -1px;
+    }
+  }
+}
+
+// 미디어쿼리 영역
+@mixin mq($screen-width) {
+  @if $screen-width =="1200" {
+    @media screen and (max-width:1200px) {
+      @content;
+    }
+  }
+  @if $screen-width =="1024" {
+    @media screen and (max-width:1024px) {
+      @content;
+    }
+  }
+  @if $screen-width =="980" {
+    @media screen and (max-width:980px) {
+      @content;
+    }
+  }
+  @if $screen-width =="768" {
+    @media screen and (max-width:768px) {
+      @content;
+    }
+  }
+  @if $screen-width =="480" {
+    @media screen and (max-width:480px) {
+      @content;
+    }
+  }
+}

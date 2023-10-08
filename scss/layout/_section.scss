@@ -1,0 +1,563 @@
+// main 영역
+#main {
+  position: relative;
+  width: 100%;
+  height: 970px;
+  background-color: $background-color-white;
+  overflow: hidden;
+  padding: 0 4rem;
+  padding-top: 240px;
+  text-align: center;
+
+  @include mq('980') {
+    height: 670px;
+    padding: 0 4rem;
+    padding-top: 340px;
+  }
+
+  .container {
+    width: 100%;
+    display: block;
+
+    .main_title_box {
+      display: block;
+      position: fixed;
+      width: 100%;
+      z-index: 96;
+      font-size: 10rem;
+      margin: 0 auto;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: $color-gray-basic;
+
+      @include mq('980') {
+        position: relative;
+      }
+
+      .main_title_inner {
+        display: inline-block;
+        text-align: left;
+
+        .main_title_sub {
+          font-size: 3.6rem;
+          font-weight: 700;
+          margin-bottom: -50px;
+
+          @include mq('768') {
+            margin-bottom: -30px;
+          }
+
+          @include mq('480') {
+            margin-bottom: -20px;
+          }
+        }
+
+        .main_title_center {
+          font-size: 20rem;
+          font-family: 'Yeseva One', cursive;
+          font-style: italic;
+        }
+      }
+
+      .txt {
+        display: block;
+        font-size: 1.8rem;
+        line-height: 18px;
+        padding-top: 1rem;
+      }
+    }
+
+    .main_circle {
+      @include Circle();
+      display: none;
+
+      @include mq('980') {
+        display: block;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .change_circle {
+      @include Circle();
+      display: block;
+      z-index: 0;
+
+      @include mq('980') {
+        display: none;
+      }
+    }
+  }
+}
+
+// about 영역
+#about {
+  position: relative;
+  width: 100%;
+  height: 940px;
+  background-color: $background-color-main;
+  overflow: hidden;
+
+  @include mq('1200') {
+    height: 740px;
+  }
+
+  .container {
+    width: 100%;
+    height: 940px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 256rem;
+    padding: 0 6rem;
+
+    @include mq('1200') {
+      height: 740px;
+      flex-direction: column;
+    }
+
+    .about_pic_box {
+      width: 42rem;
+      height: 42rem;
+      background-color: salmon;
+      border-radius: 14px;
+      overflow: hidden;
+
+      .about_pic {
+        width: 100%;
+        height: 100%;
+        /* background-image: url(../img/profile_sample.jpg); */
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+    }
+
+    .about_txt_box {
+      width: 60%;
+      margin-left: 20rem;
+
+      @include mq('1200') {
+        width: 90%;
+        margin-left: 0rem;
+        margin-top: 9rem;
+      }
+
+      .about_txt {
+        padding-top: 1.8rem;
+        font-weight: 400;
+
+        strong {
+          font-size: 2rem;
+          font-weight: bold;
+          letter-spacing: 1px;
+          color: $font-color_light;
+          font-family: 'Paytone One', sans-serif;
+        }
+
+        >p {
+          font-size: 1.8rem;
+          line-height: 1.8;
+          font-weight: 500;
+          color: #3c3c3c;
+
+          &:nth-child(2),
+          &:nth-child(3) {
+            margin-top: 1.7rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// skill 영역
+#skill {
+  position: relative;
+  width: 100%;
+  background-color: $font-color-white;
+
+  .container {
+    width: 100%;
+    display: block;
+    position: relative;
+    display: flex;
+
+    @include mq('1024') {
+      flex-direction: column;
+    }
+
+    .left_box {
+      position: sticky;
+      top: 0;
+      left: 0;
+      width: 34%;
+      height: 100vh;
+      background-color: $backgournd-color-light;
+
+      @include mq('1024') {
+        padding: 10rem 12rem;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        background-color: $backgournd-color-light;
+      }
+
+      .left_contents {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+        padding: 0 6rem;
+
+        @include mq('1024') {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          text-align: left;
+          padding: 0rem;
+        }
+
+        .headline {
+          font-size: 3.4rem;
+        }
+
+        .subhead {
+          font-size: 2rem;
+          padding-top: 1.6rem;
+        }
+      }
+    }
+
+    .right_box {
+      position: relative;
+      width: 66%;
+      overflow: hidden;
+
+      @include mq('1024') {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        padding: 10rem 12rem;
+      }
+
+      .right_contents {
+        width: 100%;
+        height: 100%;
+        padding: 16rem 6rem;
+
+        @include mq('1024') {
+          padding: 0rem;
+        }
+
+        .skill_list {
+          width: 100%;
+          display: flex;
+          align-items: center;
+
+          .skill_tit {
+            width: 30%;
+            font-size: 3.4rem;
+            font-weight: 800;
+            color: $color-main-point;
+          }
+
+          .skill_txt_box {
+            width: 70%;
+            font-size: 1.8rem;
+          }
+        }
+
+        .skill_list_line {
+          border: 1px solid #8c8c8c;
+          margin: 12rem 0;
+        }
+      }
+    }
+  }
+}
+
+// project 영역
+#project {
+  position: relative;
+  width: 100%;
+  height: 3960px;
+  background-color: $background-color-main;
+  overflow: hidden;
+
+  @include mq('768') {
+    height: 4580px;
+  }
+
+  .container {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+    padding: 0 6rem;
+
+    @include mq('768') {
+      padding: 20rem 12rem;
+    }
+
+    .project_contents {
+      position: relative;
+      width: 100%;
+      height: 760px;
+
+      .project_left {
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        left: 0;
+        -webkit-transform: translateX(-120%);
+        -moz-transform: translateX(-120%);
+        -ms-transform: translateX(-120%);
+        -o-transform: translateX(-120%);
+        transform: translateX(-120%);
+        -webkit-transition: all .3s ease-in-out;
+        -moz-transition: all .3s ease-in-out;
+        -ms-transition: all .3s ease-in-out;
+        -o-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+
+        @include mq('768') {
+          width: 100%;
+          height: 40%;
+        }
+
+        &.on {
+          @include pjOn();
+        }
+
+        img {
+          position: relative;
+          width: 100%;
+          padding: 0 6rem;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+
+      .project_right {
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        right: 0;
+        -webkit-transform: translateX(120%);
+        -moz-transform: translateX(120%);
+        -ms-transform: translateX(120%);
+        -o-transform: translateX(120%);
+        transform: translateX(120%);
+        opacity: 0;
+        -webkit-transition: all .3s ease-in-out;
+        -moz-transition: all .3s ease-in-out;
+        -ms-transition: all .3s ease-in-out;
+        -o-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+
+        @include mq('768') {
+          width: 100%;
+          height: 60%;
+          bottom: 0;
+        }
+
+        &.on {
+          @include pjOn();
+        }
+
+        .project_txt {
+          position: relative;
+          width: 80%;
+          height: auto;
+          top: 50%;
+          transform: translateY(-50%);
+          padding: 4rem;
+          font-size: 1.7rem;
+          background-color: #fff;
+          border-radius: 10px;
+          box-shadow: 1px 2px 10px 0px rgba(147, 147, 147, 0.2);
+          @include pjTitle();
+
+          @include mq('768') {
+            width: 100%;
+            top: 30%;
+            padding: 4.4rem;
+          }
+
+          .info {
+            font-weight: 600;
+            margin: 1.6rem 0 2rem;
+          }
+
+          p {
+            margin-top: 1.3rem;
+            color: $color-gray-basic;
+
+            span {
+              padding-right: 2rem;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+
+    // Clone Website 영역
+    .clone {
+      position: relative;
+      width: 100%;
+
+      .headline {
+        font-size: 3rem;
+      }
+
+      .clone_list {
+        display: flex;
+        justify-content: center;
+        margin-top: 10rem;
+
+        @include mq('768') {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin-top: 10rem;
+        }
+
+        .clone_contents {
+          position: relative;
+          width: 50%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          @include mq('768') {
+            position: relative;
+            width: 100%;
+            height: 760px;
+          }
+
+          .clone_top {
+            width: 44rem;
+            height: auto;
+
+            @include mq('768') {
+              width: 100%;
+              height: auto;
+            }
+
+            img {
+              position: relative;
+              width: 100%;
+
+              @include mq('768') {
+                padding: 0 6rem;
+              }
+            }
+          }
+
+          .clone_bottom {
+            width: 80%;
+            height: 100%;
+
+            @include mq('768') {
+              width: 100%;
+              height: 100%;
+            }
+
+            .clone_txt {
+              position: relative;
+              width: 100%;
+              height: auto;
+              padding: 4rem;
+              margin-top: 4.2rem;
+              font-size: 1.7rem;
+              background-color: $font-color-white;
+              border-radius: 10px;
+              box-shadow: 1px 2px 10px 0px rgba(147, 147, 147, 0.2);
+              @include pjTitle();
+
+              .info {
+                font-weight: 600;
+                margin: 1.6rem 0 2rem;
+              }
+
+              p {
+                margin-top: 1.3rem;
+                color: $color-gray-basic;
+
+                span {
+                  padding-right: 2rem;
+                  font-weight: 600;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// contact 영역
+#contact {
+  position: relative;
+  width: 100%;
+  height: 920px;
+  background-color: $background-color-main;
+  overflow: hidden;
+
+  @include mq('768') {
+    height: 520px;
+  }
+
+  .container {
+    position: relative;
+    width: 100%;
+    height: 920px;
+
+    @include mq('768') {
+      height: 520px;
+    }
+
+    .contact_txt {
+      position: absolute;
+      width: 100%;
+      font-size: 3.2rem;
+      z-index: 1;
+      text-align: center;
+      top: 54%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .contact_circle {
+      position: absolute;
+      width: 100vw;
+      height: 130rem;
+      border-radius: 50%;
+      background: linear-gradient(150deg, rgba(241, 225, 235, 0.9), rgba(219, 234, 255, 0.9));
+      top: 56%;
+      left: 50%;
+      transform: translateX(-50%);
+      display: block;
+      z-index: 0;
+
+      @include mq('768') {
+        height: 110%;
+      }
+    }
+  }
+}
