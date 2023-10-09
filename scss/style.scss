@@ -1,9 +1,10 @@
 @import "abstract/variables";
-@import "abstract/minxin";
+@import "abstract/mixin";
 
 @import "base/reset";
 
 @import "layout/header";
 @import "layout/section";
+@import "layout/footer";
 
 @import "components/button"

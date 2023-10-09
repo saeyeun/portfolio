@@ -15,6 +15,10 @@
     padding-top: 340px;
   }
 
+  @include mq('480') {
+    height: 570px;
+  }
+
   .container {
     width: 100%;
     display: block;
@@ -57,6 +61,10 @@
           font-size: 20rem;
           font-family: 'Yeseva One', cursive;
           font-style: italic;
+
+          @include mq('480') {
+            font-size: 18rem;
+          }
         }
       }
 
@@ -67,10 +75,53 @@
         padding-top: 1rem;
       }
     }
+    .scroll_down_wrap {
+      position: absolute;
+      left: 50%;
+      bottom: 10%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    .scroll_down {
+      position: relative;
+      width: 3rem;
+      height: 5rem;
+      border: 2px solid $color-gray-basic;
+      border-radius: 50px;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: .6rem;
+        height: .6rem;
+        background-color: $color-gray-basic;
+        border: 1px solid $color-gray-basic;
+        border-radius: 50px;
+        animation: scroll-down 1s ease-in-out infinite;
+        @keyframes scroll-down {
+          0% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+            top: 70%;
+          }
+        }
+      }
+    }
+    span {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: $font-color_light;
+      margin-top: .5rem;
+    }
+  }
 
     .main_circle {
       @include Circle();
-      display: none;
 
       @include mq('980') {
         display: block;
@@ -146,17 +197,17 @@
         margin-top: 9rem;
       }
 
+      strong {
+        font-size: 2rem;
+        font-weight: bold;
+        letter-spacing: 1px;
+        color: $font-color_light;
+        font-family: 'Paytone One', sans-serif;
+      }
+
       .about_txt {
         padding-top: 1.8rem;
         font-weight: 400;
-
-        strong {
-          font-size: 2rem;
-          font-weight: bold;
-          letter-spacing: 1px;
-          color: $font-color_light;
-          font-family: 'Paytone One', sans-serif;
-        }
 
         >p {
           font-size: 1.8rem;
@@ -230,10 +281,12 @@
 
         .headline {
           font-size: 3.4rem;
+          color: $color-gray-basic;
         }
 
         .subhead {
           font-size: 2rem;
+          color: $color-gray-basic;
           padding-top: 1.6rem;
         }
       }
@@ -274,13 +327,19 @@
 
           .skill_txt_box {
             width: 70%;
-            font-size: 1.8rem;
+            font-size: 1.7rem;
+
+            .skill_txt {
+              line-height: 1.9;
+              font-weight: 500;
+              color: $color-gray-basic;
+            }
           }
         }
 
         .skill_list_line {
           border: 1px solid #8c8c8c;
-          margin: 12rem 0;
+          margin: 10rem 0;
         }
       }
     }
@@ -291,12 +350,12 @@
 #project {
   position: relative;
   width: 100%;
-  height: 3960px;
+  height: 4780px;
   background-color: $background-color-main;
   overflow: hidden;
 
   @include mq('768') {
-    height: 4580px;
+    height: 5290px;
   }
 
   .container {
@@ -515,7 +574,7 @@
 #contact {
   position: relative;
   width: 100%;
-  height: 920px;
+  height: 900px;
   background-color: $background-color-main;
   overflow: hidden;
 
@@ -526,38 +585,89 @@
   .container {
     position: relative;
     width: 100%;
-    height: 920px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 0 6rem;
 
     @include mq('768') {
       height: 520px;
     }
 
     .contact_txt {
-      position: absolute;
-      width: 100%;
-      font-size: 3.2rem;
+      width: 86rem;
+      font-size: 2.2rem;
       z-index: 1;
-      text-align: center;
-      top: 54%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      text-align: left;
+      color: $color-gray-basic;
+      padding-left: 10rem;
+    }
+
+    .contact_adress {
+      width: 100%;
+      margin-top: 3.4rem;
+      padding-left: 10rem;
+
+      .email {
+        font-size: 2rem;
+
+        i {
+          padding-right: .8rem;
+        }
+      }
+
+      .github_btn {
+        font-size: 1.6rem;
+
+        i {
+          font-size: 2rem;
+          padding-right: 1.2rem;
+        }
+      }
+    }
+
+    @keyframes move {
+      0% {
+        transform: translateY(10%);
+      }
+
+      100% {
+        transform: translateY(18%);
+      }
     }
 
     .contact_circle {
-      position: absolute;
-      width: 100vw;
-      height: 130rem;
-      border-radius: 50%;
-      background: linear-gradient(150deg, rgba(241, 225, 235, 0.9), rgba(219, 234, 255, 0.9));
-      top: 56%;
-      left: 50%;
-      transform: translateX(-50%);
-      display: block;
-      z-index: 0;
+      @include contact_circle_deco();
+      animation: move 2s ease-in infinite alternate;
+
 
       @include mq('768') {
-        height: 110%;
+        width: 40rem;
+        height: 40rem;
       }
     }
+
+    .contact_circle_2 {
+      @include contact_circle_deco();
+      width: 14rem;
+      height: 14rem;
+      top: 30%;
+      left: 74%;
+      animation: move 1.2s ease-in infinite alternate;
+    }
+
+    // .contact_circle_3 {
+    //   position: absolute;
+    //   width: 19rem;
+    //   height: 19rem;
+    //   border-radius: 50%;
+    //   background: linear-gradient(150deg, rgba(241, 225, 235, 0.9), rgba(219, 234, 255, 0.9));
+    //   top: 30%;
+    //   left: 74%;
+    //   display: block;
+    //   z-index: 0;
+    // }
   }
 }

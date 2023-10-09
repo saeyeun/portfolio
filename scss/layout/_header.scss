@@ -5,11 +5,12 @@ header {
   top: 0;
   left: 0;
   height: 6rem;
-  margin-top: 3rem;
+  // margin-top: 1.6rem;
+  background-color: $background-color-white;
 
   .header_inner {
     width: 100%;
-    height: 5.4rem;
+    height: 100%;
     margin: 0 auto;
     padding: 0 6rem;
 
@@ -19,19 +20,20 @@ header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border: 1.4px solid $color-gray-basic;
-      padding: 0 2.4rem;
+      // border: 1.6px solid $color-gray-basic;
+      padding: 2.6rem 2.4rem;
       color: $color-gray-basic;
 
       .pj_adress {
-        font-size: 2rem;
+        font-size: 1.6rem;
       }
 
       .logo {
         padding-left: 18px;
 
         a {
-          font-size: 2rem;
+          font-size: 1.6rem;
+          font-weight: 800;
           color: $color-gray-basic;
         }
 
@@ -49,7 +51,8 @@ header {
           flex-direction: column;
           cursor: pointer;
           z-index: 99;
-          @include mq('1024'){
+
+          @include mq('1024') {
             width: 4.8rem;
           }
 
@@ -57,9 +60,10 @@ header {
             position: absolute;
             left: 0;
             font-size: 1.2rem;
-            font-weight: 700;
-            color: $color-gray-basic;
-            @include mq('1024'){
+            font-weight: 800;
+            color: $font-color_light;
+
+            @include mq('1024') {
               display: none;
             }
           }
@@ -79,6 +83,10 @@ header {
 
           .t_line {
             margin-top: 12px;
+
+            @include mq('480') {
+              margin-top: 9px;
+            }
           }
 
           &.active .t_line {
@@ -88,6 +96,10 @@ header {
 
           .b_line {
             margin-top: -12px;
+
+            @include mq('480') {
+              margin-top: -9px;
+            }
           }
 
           &.active .b_line {

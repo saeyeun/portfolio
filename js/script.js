@@ -25,8 +25,10 @@ $(document).ready(function () {
       // main_title 스크롤을 내릴 때, opicity 0으로 조절
       if (scrollTop < 280) {
         $(".main_title_box").css({ "opacity": (420 - scrollTop) / 420 });
+        $(".main_circle").css({ "opacity": (200 - scrollTop) / 200 });
       } else {
         $(".main_title_box").css({ "opacity": 0 });
+        $(".main_circle").css({ "opacity": 0 });
       }
 
       // 스크롤 값이 520보다 작으면 나타나고, 그 이상이면 사라짐
