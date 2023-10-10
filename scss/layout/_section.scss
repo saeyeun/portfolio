@@ -75,6 +75,7 @@
         padding-top: 1rem;
       }
     }
+
     .scroll_down_wrap {
       position: absolute;
       left: 50%;
@@ -83,6 +84,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      z-index: 98;
     .scroll_down {
       position: relative;
       width: 3rem;
@@ -180,7 +182,7 @@
       .about_pic {
         width: 100%;
         height: 100%;
-        /* background-image: url(../img/profile_sample.jpg); */
+        background-image: url(/img/about_image.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
@@ -216,7 +218,8 @@
           color: #3c3c3c;
 
           &:nth-child(2),
-          &:nth-child(3) {
+          &:nth-child(3),
+          &:nth-child(4) {
             margin-top: 1.7rem;
           }
         }
@@ -280,7 +283,7 @@
         }
 
         .headline {
-          font-size: 3.4rem;
+          font-size: 3.6rem;
           color: $color-gray-basic;
         }
 
@@ -363,11 +366,17 @@
     height: 100%;
     display: block;
     position: relative;
-    padding: 0 6rem;
+    padding: 4rem 6rem 0;
 
     @include mq('768') {
       padding: 20rem 12rem;
     }
+
+    .headline {
+        font-size: 3.6rem;
+        font-weight: 800;
+        color: $color-gray-basic;
+      }
 
     .project_contents {
       position: relative;
@@ -478,7 +487,9 @@
       width: 100%;
 
       .headline {
-        font-size: 3rem;
+        font-size: 3.6rem;
+        font-weight: 800;
+        color: $color-gray-basic;
       }
 
       .clone_list {
@@ -596,13 +607,23 @@
       height: 520px;
     }
 
+    .headline {
+      width: 100%;
+      font-size: 3.6rem;
+      padding-left: 10rem;
+      padding-bottom: 5rem;
+      font-weight: 800;
+      color: $color-gray-basic;
+    }
+
     .contact_txt {
-      width: 86rem;
+      width: 100%;
       font-size: 2.2rem;
       z-index: 1;
       text-align: left;
       color: $color-gray-basic;
       padding-left: 10rem;
+      line-height: 1.8;
     }
 
     .contact_adress {
@@ -610,11 +631,20 @@
       margin-top: 3.4rem;
       padding-left: 10rem;
 
+      .site {
+        font-size: 2rem;
+        padding-bottom: .6rem;
+
+        i {
+          padding-right: 1rem;
+        }
+      }
+
       .email {
         font-size: 2rem;
 
         i {
-          padding-right: .8rem;
+          padding-right: 1rem;
         }
       }
 
@@ -657,17 +687,5 @@
       left: 74%;
       animation: move 1.2s ease-in infinite alternate;
     }
-
-    // .contact_circle_3 {
-    //   position: absolute;
-    //   width: 19rem;
-    //   height: 19rem;
-    //   border-radius: 50%;
-    //   background: linear-gradient(150deg, rgba(241, 225, 235, 0.9), rgba(219, 234, 255, 0.9));
-    //   top: 30%;
-    //   left: 74%;
-    //   display: block;
-    //   z-index: 0;
-    // }
   }
 }

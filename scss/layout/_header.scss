@@ -5,7 +5,6 @@ header {
   top: 0;
   left: 0;
   height: 6rem;
-  // margin-top: 1.6rem;
   background-color: $background-color-white;
 
   .header_inner {
@@ -20,14 +19,9 @@ header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      // border: 1.6px solid $color-gray-basic;
       padding: 2.6rem 2.4rem;
       color: $color-gray-basic;
-
-      .pj_adress {
-        font-size: 1.6rem;
-      }
-
+      
       .logo {
         padding-left: 18px;
 
@@ -53,7 +47,19 @@ header {
           z-index: 99;
 
           @include mq('1024') {
-            width: 4.8rem;
+            width: 7.8rem;
+          }
+
+          @include mq('980') {
+            width: 8.8rem;
+          }
+
+          @include mq('768') {
+            width: 9.8rem;
+          }
+
+          @include mq('480') {
+            width: 11.8rem;
           }
 
           p {
@@ -62,10 +68,6 @@ header {
             font-size: 1.2rem;
             font-weight: 800;
             color: $font-color_light;
-
-            @include mq('1024') {
-              display: none;
-            }
           }
 
           .menu_line {
@@ -84,8 +86,15 @@ header {
           .t_line {
             margin-top: 12px;
 
+            @include mq('980') {
+              margin-top: 10.6px;
+            }
+            @include mq('768') {
+              margin-top: 9.6px;
+            }
+
             @include mq('480') {
-              margin-top: 9px;
+              margin-top: 8px;
             }
           }
 
@@ -97,8 +106,16 @@ header {
           .b_line {
             margin-top: -12px;
 
+            @include mq('980') {
+              margin-top: -10.6px;
+            }
+
+            @include mq('768') {
+              margin-top: -9.6px;
+            }
+
             @include mq('480') {
-              margin-top: -9px;
+              margin-top: -8px;
             }
           }
 
@@ -137,7 +154,7 @@ header {
           }
 
           .nav {
-            width: 40%;
+            width: 100%;
             height: 100vh;
             position: relative;
             margin: 0 auto;
@@ -146,23 +163,41 @@ header {
               width: 100%;
               height: 100%;
               display: flex;
-              flex-direction: column;
-              align-items: center;
-              justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+              
 
               li {
                 width: 100%;
-                height: 14%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
+                overflow: hidden;
+                text-align: center;
 
                 a {
-                  display: block;
-                  width: 100%;
+                  position: relative;
+                  display: inline-block;
                   height: 100%;
+                  padding: 2.5rem;
                   font-size: 4.4rem;
-                  text-align: center;
+                  font-weight: 900;
+                  color: $color-gray-basic;
+
+                  &::after {
+                      content: "";
+                      position: absolute;
+                      top: 50%;
+                      margin-top: -2px;
+                      left: 0;
+                      width: 0px;
+                      height: 16px;
+                      background: rgba(255, 248, 105, 0.8);
+                      transition: all .3s;
+                      transition-delay: .2s;
+                      transform: rotate(10deg);
+                    }
+                    &:hover::after {
+                      width: 100%;
+                    }
                 }
               }
             }
