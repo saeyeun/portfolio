@@ -531,7 +531,7 @@ header .header_inner .nav_list .menu .menu_wrap .nav .menu_list li a:hover::afte
 #about .container .about_pic_box .about_pic {
   width: 100%;
   height: 100%;
-  background-image: url(/img/about_image.jpg);
+  background-image: url(../img/about_image.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center
