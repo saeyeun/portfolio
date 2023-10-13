@@ -26,7 +26,7 @@ header {
         padding-left: 18px;
 
         a {
-          font-size: 1.6rem;
+          font-size: 1.7rem;
           font-weight: 800;
           color: $color-gray-basic;
         }
@@ -38,7 +38,7 @@ header {
 
         .menu_btn {
           position: relative;
-          width: 6.8rem;
+          width: 7.8rem;
           height: 4.8rem;
           display: flex;
           justify-content: center;
@@ -65,7 +65,7 @@ header {
           p {
             position: absolute;
             left: 0;
-            font-size: 1.2rem;
+            font-size: 1.7rem;
             font-weight: 800;
             color: $font-color_light;
           }
@@ -94,7 +94,7 @@ header {
             }
 
             @include mq('480') {
-              margin-top: 8px;
+              margin-top: 7.8px;
             }
           }
 
@@ -115,7 +115,7 @@ header {
             }
 
             @include mq('480') {
-              margin-top: -8px;
+              margin-top: -7.8px;
             }
           }
 

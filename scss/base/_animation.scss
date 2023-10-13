@@ -1,0 +1,93 @@
+/*  main 영역 위에서 아래로 스크롤다운 표시 이벤트 */
+@keyframes scroll-down {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    top: 70%;
+  }
+}
+@-webkit-keyframes scroll-down {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    top: 70%;
+  }
+}
+@-moz-keyframes scroll-down {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    top: 70%;
+  }
+}
+@-ms-keyframes scroll-down {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    top: 70%;
+  }
+}
+@-o-keyframes scroll-down {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    top: 70%;
+  }
+}
+
+/* 위아래로 움직이는 원 애니메이션 */
+@keyframes move {
+  0% {
+    transform: translateY(10%);
+  }
+
+  100% {
+    transform: translateY(18%);
+  }
+}
+@-webkit-keyframes move {
+  0% {
+    transform: translateY(10%);
+  }
+
+  100% {
+    transform: translateY(18%);
+  }
+}
+@-moz-keyframes move {
+  0% {
+    transform: translateY(10%);
+  }
+
+  100% {
+    transform: translateY(18%);
+  }
+}
+@-ms-keyframes move {
+  0% {
+    transform: translateY(10%);
+  }
+
+  100% {
+    transform: translateY(18%);
+  }
+}
+@-o-keyframes move {
+  0% {
+    transform: translateY(10%);
+  }
+
+  100% {
+    transform: translateY(18%);
+  }
+}
