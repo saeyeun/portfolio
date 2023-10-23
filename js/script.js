@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(function() {
   // 웹페이지 로드 후 함수 실행
   // $(window).load(function () {
   var change = $(".change_circle"); //늘어나는 원
@@ -7,15 +7,12 @@ $(document).ready(function () {
   // 함수 실행
   $(window).on('resize', mainAni); //브라우저 창 변경될 때 호출
   $(window).on('scroll', mainAni);
-  // $(window).on('scroll', scrollAni);
 
   function mainAni() {
     var windowWidth = $(window).width();
     //해상도 980px 이상일 때만 적용되는 애니메이션
     if (windowWidth > 980) {
       var scrollTop = $(this).scrollTop();
-      // var currentWidth = change.width(); //현재 너비 가져오기
-      // var currentHeight = change.height(); //현재 높이 가져오기
 
       circle.css({ 'width': 500 + 'px' }); //기존 width 설정
       circle.css({ 'height': 500 + 'px' }); //기존 height 설정
@@ -49,35 +46,13 @@ $(document).ready(function () {
     e.preventDefault()
     var sc = $(this).scrollTop();
 
-    var pj1 = $(".project_1").offset().top;
-    var pj2 = $(".project_2").offset().top;
-    var pj3 = $(".project_3").offset().top;
-    var pj4 = $(".project_4").offset().top;
-    var pj5 = $(".project_5").offset().top;
-    var pj6 = $(".project_6").offset().top;
-    if (sc >= pj1 - 350) {
-      $(".project_1>.project_left").addClass('on')
-      $(".project_1>.project_right").addClass('on')
-    }
-    if (sc >= pj2 - 350) {
-      $(".project_2>.project_left").addClass('on')
-      $(".project_2>.project_right").addClass('on')
-    }
-    if (sc >= pj3 - 350) {
-      $(".project_3>.project_left").addClass('on')
-      $(".project_3>.project_right").addClass('on')
-    }
-    if (sc >= pj4 - 350) {
-      $(".project_4>.project_left").addClass('on')
-      $(".project_4>.project_right").addClass('on')
-    }
-    if (sc >= pj5 - 350) {
-      $(".project_5>.project_left").addClass('on')
-      $(".project_5>.project_right").addClass('on')
-    }
-    if (sc >= pj6 - 350) {
-      $(".project_6>.project_left").addClass('on')
-      $(".project_6>.project_right").addClass('on')
+    for (var i = 1; i <= 6; i++){
+      var pj = $(".project_"+i).offset().top;
+      if (sc>=pj-320) {
+        //i번째 프로젝트의 자식요소 중에서 .project_left를 가진 요소를 선택
+        $(".project_"+i+" .project_left").addClass('on')
+        $(".project_"+i+" .project_right").addClass('on')
+      }
     }
   });
 
