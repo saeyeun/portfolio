@@ -348,12 +348,16 @@
 #project {
   position: relative;
   width: 100%;
-  height: 4780px;
+  height: 4880px;
   background-color: $background-color-main;
   overflow: hidden;
 
   @include mq('768') {
-    height: 5290px;
+    height: 5380px;
+  }
+
+  @include mq('480') {
+    height: 5140px;
   }
 
   .container {

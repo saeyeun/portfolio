@@ -724,14 +724,20 @@ header .header_inner .nav_list .menu .menu_wrap .nav .menu_list li a:hover::afte
 #project {
   position: relative;
   width: 100%;
-  height: 4780px;
+  height: 4880px;
   background-color: #f9f6f4;
   overflow: hidden
 }
 
 @media screen and (max-width: 768px) {
   #project {
-    height: 5290px
+    height: 5380px
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #project {
+    height: 5140px
   }
 }
 
