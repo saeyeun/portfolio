@@ -849,6 +849,14 @@ header .header_inner .nav_list .menu .menu_wrap .nav .menu_list li a:hover::afte
   margin-left: -1px
 }
 
+#project .container .project_contents .project_right .project_txt .btn {
+  display: flex
+}
+
+#project .container .project_contents .project_right .project_txt .btn .view_btn {
+  margin-right: 2.4rem
+}
+
 @media screen and (max-width: 768px) {
   #project .container .project_contents .project_right .project_txt {
     width: 100%;
@@ -1140,8 +1148,57 @@ footer .container .footer_copyright span {
   font-size: 1.4rem
 }
 
+.pop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, .4);
+  z-index: 999;
+  display: none
+}
+
+.pop .pop_img {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 10%;
+  width: 74%;
+  height: 80%;
+  background-color: #fff;
+  border-radius: 30px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, .5);
+  overflow: scroll;
+  -ms-overflow-style: none
+}
+
+.pop .pop_img::-webkit-scrollbar {
+  display: none
+}
+
+.pop .pop_img img {
+  width: 100%;
+  height: auto;
+  border-radius: 30px
+}
+
+.pop .pop_close {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  cursor: pointer;
+  z-index: 999
+}
+
+.pop .pop_close i {
+  color: #fff;
+  font-size: 4.8rem
+}
+
 .github_btn,
-.view_btn {
+.view_btn,
+.concept_btn {
   position: relative;
   display: block;
   background: rgba(0, 0, 0, 0);
@@ -1159,12 +1216,14 @@ footer .container .footer_copyright span {
 }
 
 .github_btn:focus,
-.view_btn:focus {
+.view_btn:focus,
+.concept_btn:focus {
   outline: none
 }
 
 .github_btn::before,
-.view_btn::before {
+.view_btn::before,
+.concept_btn::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -1177,12 +1236,14 @@ footer .container .footer_copyright span {
 }
 
 .github_btn:hover,
-.view_btn:hover {
+.view_btn:hover,
+.concept_btn:hover {
   color: #fff
 }
 
 .github_btn:hover::before,
-.view_btn:hover::before {
+.view_btn:hover::before,
+.concept_btn:hover::before {
   transform: translateX(100%)
 }
 

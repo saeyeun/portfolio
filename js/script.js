@@ -48,7 +48,7 @@ $(function() {
 
     for (var i = 1; i <= 6; i++){
       var pj = $(".project_"+i).offset().top;
-      if (sc>=pj-320) {
+      if (sc>=pj-440) {
         //i번째 프로젝트의 자식요소 중에서 .project_left를 가진 요소를 선택
         $(".project_"+i+" .project_left").addClass('on')
         $(".project_"+i+" .project_right").addClass('on')
@@ -68,5 +68,26 @@ $(function() {
     //기본 클릭 이벤트 동작을 막아줄 때(ex.<a>, <button>)
     $('.menu_wrap').removeClass('active');
     $('.menu_btn').removeClass('active');
+  });
+
+  // project의 concept_btn을 클릭했을 때, popup 창이 열리도록 설정
+  $('.project_3 .project_right .concept_btn').click(function(){
+    $('.pop1 .pop_img').animate({scrollTop:0},0.1)
+    $('.pop1').fadeIn()
+    $('body').css('overflow', 'hidden');
+  })
+  $('.project_4 .project_right .concept_btn').click(function(){
+    $('.pop2 .pop_img').animate({scrollTop:0},0.1)
+    $('.pop2').fadeIn()
+    $('body').css('overflow', 'hidden');
+  })
+  $('.project_5 .project_right .concept_btn').click(function(){
+    $('.pop3 .pop_img').animate({scrollTop:0},0.1)
+    $('.pop3').fadeIn()
+    $('body').css('overflow', 'hidden');
+  })
+  $('.pop_close').click(function(){
+    $(this).parent().fadeOut()
+    $('body').css('overflow', 'auto');
   })
 });

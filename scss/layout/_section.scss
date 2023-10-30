@@ -207,7 +207,6 @@
           line-height: 1.8;
           font-weight: 500;
           color: #3c3c3c;
-
           &:nth-child(2),
           &:nth-child(3),
           &:nth-child(4) {
@@ -455,6 +454,13 @@
           border-radius: 10px;
           box-shadow: 1px 2px 10px 0px rgba(147, 147, 147, 0.2);
           @include pjTitle();
+
+          .btn {
+            display: flex;
+            .view_btn {
+              margin-right: 2.4rem;
+            }
+          }
 
           @include mq('768') {
             width: 100%;
